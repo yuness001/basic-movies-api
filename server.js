@@ -12,13 +12,13 @@ app.get('/', express.static('public'))
 
 // checking the key
 
-app.use((req, res, next) => {
-    if (req.query.key === '1234') {
-        next()
-    } else {
-        res.status(401).send('Unauthorized')
-    }
-})
+// app.use((req, res, next) => {
+//     if (req.query.key === '1234') {
+//         next()
+//     } else {
+//         res.status(401).send('Unauthorized')
+//     }
+// })
 
 app.post('/movies', (req, res) => {
     fs.readFile('movies.json', 'utf-8', (err, data) => {
