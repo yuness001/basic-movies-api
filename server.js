@@ -55,4 +55,4 @@ app.get('/movies', (req, res) => {
 
 
 // running the server 
-app.listen(PORT, () => console.log(`server is running on port ${PORT}`))
+app.listen(process.env.PORT || PORT, () => console.log(`server is running on port ${PORT}`))
